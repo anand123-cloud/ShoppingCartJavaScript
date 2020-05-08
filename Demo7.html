@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Page2</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+	
+	body{
+	background-color:black;
+    min-width:900px;
+    min-height:900px;
+     }
+	
+
+.maincontainer{
+		 width:800px;
+		 height:530px;
+		 background-color:white;
+		 border: 2px solid #3f6eb591;
+		margin-left:100px;
+	}
+	.innercontainer{
+		 width:95%;
+		 height:95%;
+		border: 3px solid #3f6eb591;
+		background-color:white;
+		margin-bottom:5px;
+		margin-left:21px;
+		margin-top:20px;
+	}
+	header{
+		background-color:#3f6eb591;
+		
+	}
+		
+	.headerdiv{
+		overflow: auto;
+		border-bottom: 2px solid #3f6eb591;
+		 height:53.5px;
+		background-color:#3f6eb591;
+	}
+	 .headerdiv  button{
+	 margin-left:20px;
+	 margin-top:10px;
+	 border-radius: 8px;
+	 padding: 8px 15px;
+	 }
+	<!-- #bookmarkid{
+		float:right;
+		height:20px;
+		width:50px;
+		background-color:#3f6eb591;
+		margin-top:15px;
+		
+		padding: 5px;
+ 	}  -->
+	
+		.footdiv{
+		width:100%;		
+		height:9%;
+		
+		background-color:#3f6eb591;
+		 border-bottom: 2px solid #3f6eb591;
+		}
+	.footdiv p{
+	text-align: center;
+	 margin-top:1px;
+	
+	 }
+	 
+	 .innerdivbody{
+	  width:100%;
+	  height:400px;
+	 background-color:white;
+	 }
+	
+	.navcls {
+	  margin-right:5px;
+	  
+	  float: left;
+	  width: 18%;
+	  height: 361px; 
+	  background: #3f6eb591;
+	  padding: 20px;
+	  border:1px solid #3f6eb591;
+         }
+		 
+	 .navcls li{
+	  list-style-type:none;
+	  }
+	li  a{
+	text-decoration: underline;
+	color:white;
+	font-size: large;
+	font-weight: bold;
+	}
+	.imagediv{
+	margin-left:22.5%;
+	width:590px;
+	height:400px;
+	background-color:white;
+	box-sizing: border-box;
+	}
+	
+	  
+	.img{
+	  background-color:#3f6eb591;
+	  float: left;
+	  width: 21.33%;
+	  padding: 10px;
+	  height: 82px;
+   
+	}
+	.imgrow{
+	background-color:white;
+	width:100%;
+	height:121px;
+	 }
+ 
+	.imgrow::after {
+	  content: "";
+	  clear: both;
+	  display: table;
+    }
+	
+	.middle{
+	margin-left:30px;
+	margin-top:10px;
+	text-align:center;
+	  }
+	.left{
+	margin-left:20px;
+	margin-top:10px;
+	text-align:center;
+	   }
+	.right{
+	margin-left:30px;
+	margin-top:10px;
+	text-align:center;
+	   }
+
+	 <!-- Responsive web page in any size of browser -->
+	@media screen and (max-width: 500px) {
+  .column {
+    width: 100%;
+  }
+    </style>
+</head>
+<body>
+<div class="maincontainer">
+<div class="innercontainer">
+<!--<div class="headerdivmain">-->
+       <header>
+           <div class="headerdiv">
+               <button name="company logo" class="company logo">Company Logo</button>
+               
+
+
+               <button name="loginusername" class="loginusername">LOGINUSERNAME</button> 
+               
+           </div>
+    </header>
+<!--</div> -->
+<div class="innerdivbody">
+       <section>
+	   
+	   <div class="navcls" id="navid">
+           <nav>
+		   
+               <ul>
+                   <li><a href="#">List of products</a></li>&nbsp;&nbsp;&nbsp;
+                   <li><a href="#">Cart items</a></li>&nbsp;&nbsp;&nbsp;
+                   <li><a href="#">Previous Orders</a></li>
+               </ul>
+           </nav>
+		   </div>
+		   <div class="imagediv">
+
+		   <div class="imgrow">
+           <div class="img left" ><h2>img1</h2></div>
+           <div class="img middle"><h2>img2</h2></div>
+           <div class="img right"><h2>img3</h2></div>
+		   </div>
+
+           <br/>
+           
+           <div class="imgrow">
+           <div class="img left"><h2>img4</h2></div>
+           <div class="img middle"><h2>img5</h2></div>
+           <div class="img right"><h2>img6</h2></div>
+		   </div>
+		   <br />
+          
+           <div class="imgrow">
+           <div class="img left"><h2>img7</h2></div>
+           <div class="img middle"><h2>img8</h2></div>
+           <div class="img right"><h2>img9</h2></div>
+		   </div>
+		   <br />
+		   </div>
+		   </div>
+         
+       </section>
+   <div class="footdiv">
+    <footer>
+	     <p>@Copyright 2020</p>
+    </footer>
+	</div>
+</div>
+</div>
+</body>
+</html>
