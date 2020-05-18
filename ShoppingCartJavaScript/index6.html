@@ -1,0 +1,1167 @@
+
+  
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Onlineshopping.com</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+
+        body {
+            background-color: white;
+            min-width: 900px;
+            min-height: 900px;
+        }
+
+
+        .maincontainer {
+            width: 800px;
+            height: 630px;
+            background-color: white;
+            border: 2px solid brown;
+            margin-left: 100px;
+        }
+
+        .innercontainer {
+            width: 780px;
+            height: 625px;
+            border: 3px solid #3f6eb591;
+            background-color: white;
+            margin-left: 10px;
+            
+        }
+
+       
+        .headerdiv {
+            overflow: auto;
+            border-bottom: 2px solid #3f6eb591;
+            height: 55px;
+            background-color: bisque;
+                    }
+
+        .headerdiv button {
+            margin-left: 20px;
+            margin-top: 10px;
+            border-radius: 8px;
+            padding: 8px 15px;
+        }
+         #bookmarkid {
+            float: right;
+            height: 20px;
+            width: 30px;
+            background-color:bisque;
+            margin-top: 15px;
+            border-radius:50%;
+        }
+
+
+        .footdiv {
+            width: 100%;
+            height: 8%;
+            background-color: #3f6eb591;
+            background-color: #3f6eb591;
+             margin-bottom:43px;
+        }
+
+        .footdiv p {
+            text-align: center;
+            margin-top: 1px;
+        }
+
+        .innerdivbody {
+            width: 100%;
+            height: 500px;
+            background-color: white;
+           
+            
+        }
+
+        .navcls {
+            margin-right: 5px;
+            float: left;
+            width: 18%;
+            height: 498px;
+            background: burlywood;
+            padding-left: 19px;
+            border: 1px solid #3f6eb591;
+            
+        }
+
+            .navcls li {
+                list-style-type: none;
+            }
+
+        li a {
+           color: white;
+            font-size: large;
+            font-weight: bold;
+        }
+
+        .imagediv {
+            margin-left: 21%;
+            width: 79%;
+            height: 500px;
+            background-color: white;
+           
+              }
+
+        @media screen and (max-width: 600px) {
+            .topnav .login-container {
+                float: none;
+            }
+        }
+
+        /*  User Registration starts here*/
+
+
+        .userdetailsdividion {
+            border: 2px solid pink;
+            height: 400px;
+            width: 400px;
+            background-color: pink;
+            margin-left: 40px;
+            margin-top: 20px;
+        }
+
+        #user {
+            border-bottom: 4px solid blue;
+            margin-left: 30%;
+            color: white;
+            font-family: Dubai;
+            font-size: 30px;
+        }
+
+
+        input {
+            padding: 5px 13px;
+            float: right;
+            margin-right: 15px;
+            margin-top: 5px;
+        }
+
+        label {
+            float: left;
+            clear: right;
+            margin-left: 5px;
+            margin-top: 5px;
+        }
+
+        input label {
+            display: flex;
+            flex-direction: row;
+        }
+
+        #saveButton {
+            background-color: rosybrown;
+            float: right;
+            margin-top: 70px;
+        }
+
+
+       /*   login starts here */
+        #loginDisplay {
+            border: 2px solid pink;
+            height: 300px;
+            width: 300px;
+            background-color: pink;
+            margin-left: 40px;
+        }
+        #ulogin{
+            margin-left:60px;
+            margin-top:40px;
+        }
+        /*   Product starts here */
+        button {
+            background-color: cornflowerblue;
+        }
+
+        /* order starts here*/
+
+        #orderId{
+            overflow:auto;
+        }
+     
+    </style>
+</head>
+
+
+
+
+
+<body>
+    <div class="maincontainer">
+        <div class="innercontainer">
+            <div class="headerdiv">
+                <header>
+                    <button name="home" class="home">HOME</button>
+                    <button name="register" class="registeration" value="register" id="register" onclick="registration()">REGISTRATION</button>
+                    <button name="login" value="login" id="login" class="userlogin" onclick="login()">LOG IN</button>
+                    
+                </header>
+            </div>
+            
+            <div class="innerdivbody">
+                <section>
+
+                    <div class="navcls" id="navid">
+                        <nav>
+                            <ul>
+                                <li><a href="#" onclick="MyOrders()" id="order">My Orders</a></li>&nbsp;&nbsp;&nbsp;
+                                <li><a href="#" onclick="Products()" id="product">Display Products</a></li>&nbsp;&nbsp;&nbsp;
+                                <li><a href="#" id="cart" onclick="Carts()">Cart</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <div class="imagediv" id="imagediv">
+                        <!--  reg div starts -->
+                        <div id="regDisplay" style="display: none">
+                            <!--div w3-include-html="Registration.html"></div>-->
+                            <div class="userdetailsdividion">
+                                <span id="user">User Registration</span>
+                                <!-- <form action="" id="userform" method="post" class="userformcls">-->
+                                <label for="userName">Your name</label>
+                                <input type="text" name="userName" required placeholder="Your Name" />
+
+                                <label for="password">Password</label>
+                                <input type="password" required name="password" placeholder="password" />
+
+                                <label for="Email">Email</label>
+                                <input type="email" required name="email" placeholder="Your Email address" />
+                                <label for="MobileNumber">MobileNumber</label>
+                                <input type="text" name="mobileNumber" required placeholder="MobileNumber" />
+                                <label for="address">Address</label>
+                                <input type="text" required name="address" placeholder="Address" />
+
+                                <button onclick="registerFormSubmit()" id="saveButton" value="save">Save</button>
+
+                                <!-- </form>-->
+                            </div>
+                        </div>
+                        <div id="userDetailsTable" class="userDetails" style="display: none">
+
+                            <p id="demo">  </p><br />
+
+                        </div>
+                        <!--  reg div end -->
+                        <!--  Log in div starts -->
+                        <div id="loginDisplay" style="display: none">
+                            <label for="userName"> Userid</label>
+                            <input type="text" required name="loginId" placeholder="Your Userid" id="loginId" />
+                            <label for="password">Password</label>
+                            <input type="password" name="password" required placeholder="password" id="password" />
+                            <button onclick="validateReq()" name="ulogin" id="ulogin" value="ulogin">Login</button>
+                        </div>
+
+                        <div id="loginMsgId" class="loginMsg" style="display: none">
+
+                            <p id="loginMsg">  </p><br />
+
+                        </div>
+                        <!--  login div end -->
+                        <!-- products starts-->
+                        <div id="productId" class="product" style="display: none">
+                            <div id="productMsg">Available Products: </div><br />
+                        </div>
+
+                        <!-- products end-->
+                        <!-- carts starts-->
+                        <div id="cartId" class="cart" style="display: none">
+                            <p id="cartMsg">Available Carts: </p><br />
+                        </div>
+                        <div id="allcartId" class="cart" style="display: none">
+                            <p id="allcarts">Your carts: </p><br />
+                        </div>
+                        <!-- carts end-->
+                        <!-- Order starts-->
+                        <div id="orderId" class="cart" style="display: none">
+                            <p id="allorders">Your Orders: </p><br />
+                        </div>
+                        <!-- Order end-->
+                    </div>
+                   
+                  
+                </section>
+            </div>
+
+
+            <div class="footdiv">
+                <footer>
+                    <p>@Copyright 2020</p>
+                </footer>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    var isLoggedIn;
+    var commonVariable = "";
+    function registration() {
+          
+        var divs, i, elmnt, file, xhttp;
+        commonVariable = "register"
+
+        var regElement = document.getElementById("register");
+        var regDisplayBlock = document.getElementById("regDisplay");
+        var loginDisplayBlock = document.getElementById("loginDisplay");
+        var regSuccessdisplayBlock = document.getElementById("userDetailsTable");
+        var loginMsgdisplayBlock = document.getElementById("loginMsgId");
+        var cartDivDisplay = document.getElementById("cartId"); 
+        var productDivDisplay = document.getElementById("productId");
+
+        var placeOrderMsgDisplay = document.getElementById("allcartId");
+        var productDivdisplayBlock = document.getElementById("productId");
+        var myOrderDisplay = document.getElementById("orderId");
+        if (regElement.value == "register") {
+           
+            regDisplayBlock.style.display = "block";
+            loginDisplayBlock.style.display = "none";
+            regSuccessdisplayBlock.style.display = "none";
+            loginMsgdisplayBlock.style.display = "none";
+            cartDivDisplay.style.display = "none";
+            productDivDisplay.style.display = "none";
+            placeOrderMsgDisplay.style.display = "none";
+            productDivdisplayBlock.style.display = "none";
+            myOrderDisplay.style.display = "none";
+            divs = document.getElementsByTagName("div");
+            for (i = 0; i < divs.length; i++) {
+                elmnt = divs[i];
+
+                file = elmnt.getAttribute("w3-include-html");
+                if (file) {
+                    if (window.XMLHttpRequest) {
+                        xhttp = new XMLHttpRequest();
+                    } else {
+                        xhttp = new ActiveXObject();
+                    }
+
+                    xhttp.onreadystatechange = function () {
+                        if (this.readyState == 4) {
+
+                            document.getElementById("regDisplay").innerHTML = this.response;
+                        }
+                    }
+                    xhttp.open("GET", file, true);
+                    xhttp.setRequestHeader("Content-type", "text/html; charset=utf-8");
+                    xhttp.send();
+
+                }
+            }
+
+        } else {
+            regDisplayBlock.style.display = "none";
+        }
+    }
+
+
+    function registerFormSubmit() {
+      
+        var formFields = document.querySelectorAll("input");
+
+        var userName = formFields[0].value;
+        var password = formFields[1].value;
+        var email = formFields[2].value;
+        var mobileNumber = formFields[3].value;
+        var address = formFields[4].value;
+
+        saveFormData(userName, password, email, mobileNumber, address);
+
+    }
+
+    
+
+    function saveFormData(userName, password, email, mobileNumber, address) {
+        var xrandom = "U"+ Math.floor((Math.random() * 100) + 1);
+        var formdata = {
+            id: ""+xrandom,
+            userName: userName,
+            password: password,
+            email: email,
+            mobileNumber: mobileNumber,
+            address: address
+        };
+        var sendData = JSON.stringify(formdata);
+        var xhttp;
+        if (window.XMLHttpRequest) {
+            xhttp = new XMLHttpRequest();
+        } else {
+            xhttp = new ActiveXObject();
+        }
+
+        xhttp.onreadystatechange = function () {
+            if (this.readyState == 4) {
+
+                var ele = document.getElementById("saveButton");
+                var displayBlock = document.getElementById("userDetailsTable");
+                var loginMsgdisplayBlock = document.getElementById("loginMsgId");
+                if (ele != null && ele.value == "save") {
+                    displayBlock.style.display = "block";
+                    var regDisplayBlock = document.getElementById("regDisplay");
+                    regDisplayBlock.style.display = "none";
+                    loginMsgdisplayBlock.style.display = "none";
+                    document.getElementById("demo").innerHTML = "User Added successfully :";
+                    JSON.parse(this.response);
+                } else {
+                    displayBlock.style.display = "none";
+                }
+
+            }
+        }
+        xhttp.open("POST", "http://localhost:3000/users", true);
+        xhttp.setRequestHeader("Content-type", "application/json");
+        console.log(sendData)
+        xhttp.send(sendData);
+    }
+
+    function login() {
+        
+       var ele = document.getElementById("login");
+        var loginDisplayBlock = document.getElementById("loginDisplay");
+
+        var regDisplayBlock = document.getElementById("regDisplay");
+        var regSuccessdisplayBlock = document.getElementById("userDetailsTable");
+        var loginMsgdisplayBlock = document.getElementById("loginMsgId");
+        var productDivdisplayBlock = document.getElementById("productId");
+        var cartDivDisplay = document.getElementById("cartId");
+     
+        var productDivDisplay = document.getElementById("productId");
+        var myOrderDisplay = document.getElementById("orderId");
+        var placeOrderMsgDisplay = document.getElementById("allcartId");
+        
+
+       if (ele!=null && ele.value == "login") {
+           loginDisplayBlock.style.display = "block";
+           regDisplayBlock.style.display = "none";
+           regSuccessdisplayBlock.style.display = "none";
+           loginMsgdisplayBlock.style.display = "none";
+           productDivdisplayBlock.style.display = "none";
+           cartDivDisplay.style.display = "none";
+           productDivDisplay.style.display = "none";
+           placeOrderMsgDisplay.style.display = "none";
+           myOrderDisplay.style.display = "none";
+       } else {
+           loginDisplayBlock.style.display = "none";
+        }
+    }
+
+    function validateReq() {
+        var ele1 = document.getElementById("ulogin");
+        if (ele1 != null && ele1.value == "ulogin") {
+            // credential valdate here
+            var id = document.getElementById("loginId");
+            var pass = document.getElementById("password");
+
+            var formFields = document.querySelectorAll("input");
+            var loginId = formFields[5].value;
+            var password = formFields[6].value;
+            credentialCheck(loginId, password);
+        }
+
+
+    }
+
+    function credentialCheck(loginId , password) {
+        var httpReq;
+        if (window.XMLHttpRequest) {
+            httpReq = new XMLHttpRequest();
+        } else {
+            httpReq = new ActiveXObject();
+        }
+        loginDisplayBlock = document.getElementById("loginDisplay");
+        var loginMsgdisplayBlock = document.getElementById("loginMsgId");
+        var productDivdisplayBlock = document.getElementById("productId");
+        var regDisplayBlock = document.getElementById("regDisplay");
+        var loginDisplayBlock = document.getElementById("loginDisplay");
+        var regSuccessdisplayBlock = document.getElementById("userDetailsTable");
+        var myOrderDisplay = document.getElementById("orderId");
+        var productDivDisplay = document.getElementById("productId");
+
+        var placeOrderMsgDisplay = document.getElementById("allcartId");
+
+        
+        var cartDivDisplay = document.getElementById("cartId");
+        httpReq.onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 200) {
+                if (this.response != "[]") { 
+                    isLoggedIn = true;
+
+                    var jsonObject = { id: loginId, password: password };
+                    localStorage.setItem("loggedInUserDetails", JSON.stringify(jsonObject));
+                    sessionStorage.setItem("loggedInUserDetails", JSON.stringify(jsonObject));
+                    loginDisplayBlock.style.display = "none";
+                    productDivdisplayBlock.style.display = "none";
+                    regDisplayBlock.style.display = "none";
+                    regSuccessdisplayBlock.style.display = "none";
+                    cartDivDisplay.style.display = "none";
+                    placeOrderMsgDisplay.style.display = "none";
+                    productDivDisplay.style.display = "none";
+                    loginMsgdisplayBlock.style.display = "block";
+                    myOrderDisplay.style.display = "none";
+                    document.getElementById("loginMsg").innerHTML = "User LoggedIn successfully :";
+                } else {
+                    loginDisplayBlock.style.display = "block";
+                    loginMsgdisplayBlock.style.display = "block";
+                    document.getElementById("loginMsg").innerHTML = "LogIn failure due to incorrect credentials";
+
+                }                      
+            } 
+        }
+        var id = loginId;
+        var pass = password;
+        
+        var url = "http://localhost:3000/users?id=" + id + "&&password=" + pass;
+        console.log("url :  "+url)
+        httpReq.open("GET", url, true);
+        httpReq.send();
+            }
+
+       
+    function Products() {
+       
+       // if (isLoggedIn) {
+            getAllProducts();
+      //  }
+    }
+   function getAllProducts(){
+
+       var productDivdisplayBlock = document.getElementById("productId");
+       var regDisplayBlock = document.getElementById("regDisplay");
+       var loginDisplayBlock = document.getElementById("loginDisplay");
+       var regSuccessdisplayBlock = document.getElementById("userDetailsTable");
+       var loginMsgdisplayBlock = document.getElementById("loginMsgId");
+       var cartDivDisplay = document.getElementById("cartId");
+       var placeOrderMsgDisplay = document.getElementById("allcartId");
+       var myOrderDisplay = document.getElementById("orderId");
+       
+        var httpReq;
+        if (window.XMLHttpRequest) {
+            httpReq = new XMLHttpRequest();
+        } else {
+            httpReq = new ActiveXObject();
+        }
+        httpReq.onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 200) {
+                productDivdisplayBlock.style.display = "block";
+                regDisplayBlock.style.display = "none";
+                loginDisplayBlock.style.display = "none";
+                regSuccessdisplayBlock.style.display = "none";
+                loginMsgdisplayBlock.style.display = "none";
+                cartDivDisplay.style.display = "none";
+                loginDisplayBlock.style.display = "none";
+                placeOrderMsgDisplay.style.display = "none";
+                myOrderDisplay.style.display = "none";
+                  generate_product_table(this.response);
+            }
+        }
+        httpReq.open("GET", "http://localhost:3000/products", true);
+        httpReq.send();
+    }
+    function generate_product_table(response) {
+
+        document.designMode = "on";
+        // get the reference for the body
+        var body = document.getElementById("productId");
+
+        // creates a <table> element and a <tbody> element
+        var tbl = document.createElement("table");
+
+        // set table design here
+        // tb1.setAttribute("style","color:lightskyblue;")
+
+        var header = document.createElement('thead');
+        var headingRow = document.createElement('tr');
+
+        // header.style.backgroundColor = green;
+        header.setAttribute("style", "background-color:green; font-size:20px; font-family: Dubai;");
+
+        var headingCell1 = document.createElement('td');
+        var headingText1 = document.createTextNode('ProductId');
+        headingCell1.appendChild(headingText1);
+        headingRow.appendChild(headingCell1);
+
+        var headingCell2 = document.createElement('td');
+        var headingText2 = document.createTextNode('productName');
+        headingCell2.appendChild(headingText2);
+        headingRow.appendChild(headingCell2);
+
+        var headingCell3 = document.createElement('td');
+        var headingText3 = document.createTextNode('ProductDesc');
+        headingCell3.appendChild(headingText3);
+        headingRow.appendChild(headingCell3);
+
+        var headingCell4 = document.createElement('td');
+        var headingText4 = document.createTextNode('Price');
+        headingCell4.appendChild(headingText4);
+        headingRow.appendChild(headingCell4);
+
+        var actionColumn = document.createElement('td');
+        var actionText = document.createTextNode('Action');
+        actionColumn.appendChild(actionText);
+        headingRow.appendChild(actionColumn);
+
+     
+        header.appendChild(headingRow)
+        tbl.appendChild(header)
+
+
+        var tblBody = document.createElement("tbody");
+        var data = JSON.parse(response);
+        var tableRowLength = data.length;
+        if (tableRowLength > 0) {
+            // creating all cells
+            for (var i = 0; i < tableRowLength; i++) {
+                // creates a table row
+                var row = document.createElement("tr");
+
+                var td1 = document.createElement("td");
+                var td1Text = document.createTextNode(data[i].productid);
+                td1.appendChild(td1Text);
+                row.appendChild(td1);
+
+                var td2 = document.createElement("td");
+                var td2Text = document.createTextNode(data[i].productName);
+                td2.appendChild(td2Text);
+                row.appendChild(td2);
+
+                var td3 = document.createElement("td");
+                var td3Text = document.createTextNode(data[i].desc);
+                td3.appendChild(td3Text);
+                row.appendChild(td3);
+
+                var td4 = document.createElement("td");
+                var td4Text = document.createTextNode(data[i].price);
+                td4.appendChild(td4Text);
+                row.appendChild(td4);
+
+                var td5 = document.createElement('td');
+                var addCartBtn = document.createElement('button');
+                addCartBtn.addEventListener('click', function () {
+                    var data = this.parentElement.parentElement.cells;
+                    var sessionStorageData = sessionStorage.getItem("loggedInUserDetails");
+                    var userData = JSON.parse(sessionStorageData);
+                    var userId = userData.id;
+                    var xrandom = "C" + Math.floor((Math.random() * 100) + 1);
+                    var jsonObject = {
+                        id: xrandom, productid: data[0].innerHTML, productName: data[1].innerHTML, desc: data[2].innerHTML,
+                        price: data[3].innerHTML, userId: userId
+                    };
+                    sessionStorage.setItem("addCartDetails", JSON.stringify(jsonObject));
+                    saveCartItems(jsonObject);
+                     })
+
+                var addCartBtnText = document.createTextNode('AddToCart');
+                addCartBtn.appendChild(addCartBtnText);
+
+                td5.appendChild(addCartBtn);
+                row.appendChild(td5); 
+
+                 // add the row to the end of the table body
+                tblBody.appendChild(row);
+            }
+        }
+        // put the <tbody> in the <table>
+        tbl.appendChild(tblBody);
+        // appends <table> into <body>
+        body.appendChild(tbl);
+        // sets the border attribute of tbl to 1;
+        tbl.setAttribute("border", "1");
+          
+    }
+
+    function saveCartItems(jsonObject) {
+
+        var cartdata = JSON.stringify(jsonObject);
+        var xhttp;
+        if (window.XMLHttpRequest) {
+            xhttp = new XMLHttpRequest();
+        } else {
+            xhttp = new ActiveXObject();
+        }
+        var cartDivDisplay = document.getElementById("cartId");
+        xhttp.onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 201) {
+                cartDivDisplay.style.display = "block";
+                document.getElementById("cartMsg").innerHTML = " Product Added in cart successfully :";
+                JSON.parse(this.response);
+            }
+        }
+        xhttp.open("POST", "http://localhost:3000/carts", true);
+        xhttp.setRequestHeader("Content-type", "application/json");
+        console.log(cartdata)
+        xhttp.send(cartdata);
+    }
+
+  function  Carts(){
+     // if (isLoggedIn) {
+          getAllCarts();
+     // }
+    }
+    function getAllCarts() {
+        var sessionStorageData = sessionStorage.getItem("loggedInUserDetails");
+        var userData = JSON.parse(sessionStorageData);
+        var userId = userData.id;
+
+        var myOrderDisplay = document.getElementById("orderId");
+        var productDivdisplayBlock = document.getElementById("productId");
+        var regDisplayBlock = document.getElementById("regDisplay");
+        var loginDisplayBlock = document.getElementById("loginDisplay");
+        var regSuccessdisplayBlock = document.getElementById("userDetailsTable");
+        var loginMsgdisplayBlock = document.getElementById("loginMsgId");
+        var cartDivDisplay = document.getElementById("cartId");
+        var allCartsDisplay = document.getElementById("allcartId");
+        
+        var httpReq;
+        if (window.XMLHttpRequest) {
+            httpReq = new XMLHttpRequest();
+        } else {
+            httpReq = new ActiveXObject();
+        }
+        httpReq.onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 200) {
+                if (this.response != "[]") {
+                    productDivdisplayBlock.style.display = "none";
+                    regDisplayBlock.style.display = "none";
+                    loginDisplayBlock.style.display = "none";
+                    regSuccessdisplayBlock.style.display = "none";
+                    loginMsgdisplayBlock.style.display = "none";
+                    cartDivDisplay.style.display = "none";
+                    loginDisplayBlock.style.display = "none";
+                    allCartsDisplay.style.display = "block";
+                    myOrderDisplay.style.display = "none";
+                    generate_cart_table(this.response);
+                } else {
+                    cartDivDisplay.style.display = "block";
+                    productDivdisplayBlock.style.display = "none";
+                    regDisplayBlock.style.display = "none";
+                    loginDisplayBlock.style.display = "none";
+                    regSuccessdisplayBlock.style.display = "none";
+                    loginMsgdisplayBlock.style.display = "none";
+                    loginDisplayBlock.style.display = "none";
+                    allCartsDisplay.style.display = "none";
+                    myOrderDisplay.style.display = "none";
+                    document.getElementById("cartMsg").innerHTML = "Your Cart is Empty";
+                }
+            }
+        }
+        httpReq.open("GET", "http://localhost:3000/carts?userId=" + userId, true);
+        httpReq.send();
+    }
+
+    function generate_cart_table(response) {
+        document.designMode = "on";
+        // get the reference for the body
+        var body = document.getElementById("allcartId");
+
+        // creates a <table> element and a <tbody> element
+        var tbl = document.createElement("table");
+
+        // set table design here
+        // tb1.setAttribute("style","color:lightskyblue;")
+
+        var header = document.createElement('thead');
+        var headingRow = document.createElement('tr');
+
+        // header.style.backgroundColor = green;
+        header.setAttribute("style", "background-color:green; font-size:20px; font-family: Dubai;");
+
+        var headingCell1 = document.createElement('td');
+        var headingText1 = document.createTextNode('CartId');
+        headingCell1.appendChild(headingText1);
+        headingRow.appendChild(headingCell1);
+
+        var headingCell2 = document.createElement('td');
+        var headingText2 = document.createTextNode('productid');
+        headingCell2.appendChild(headingText2);
+        headingRow.appendChild(headingCell2);
+
+        var headingCell3 = document.createElement('td');
+        var headingText3 = document.createTextNode('productName');
+        headingCell3.appendChild(headingText3);
+        headingRow.appendChild(headingCell3);
+
+        var headingCell4 = document.createElement('td');
+        var headingText4 = document.createTextNode('productDesc');
+        headingCell4.appendChild(headingText4);
+        headingRow.appendChild(headingCell4);
+
+        var headingCell5 = document.createElement('td');
+        var headingText5 = document.createTextNode('price');
+        headingCell5.appendChild(headingText5);
+        headingRow.appendChild(headingCell5);
+
+        var headingCell6 = document.createElement('td');
+        var headingText6 = document.createTextNode('userId');
+        headingCell6.appendChild(headingText6);
+        headingRow.appendChild(headingCell6);
+
+        var actionColumn = document.createElement('td');
+        var actionText = document.createTextNode('Action');
+        actionColumn.appendChild(actionText);
+        headingRow.appendChild(actionColumn);
+
+
+        header.appendChild(headingRow)
+        tbl.appendChild(header)
+
+
+        var tblBody = document.createElement("tbody");
+        var data = JSON.parse(response);
+        var tableRowLength = data.length;
+        if (tableRowLength > 0) {
+            // creating all cells
+            for (var i = 0; i < tableRowLength; i++) {
+                // creates a table row
+                var row = document.createElement("tr");
+
+                var td1 = document.createElement("td");
+                var td1Text = document.createTextNode(data[i].id);
+                td1.appendChild(td1Text);
+                row.appendChild(td1);
+
+                var td2 = document.createElement("td");
+                var td2Text = document.createTextNode(data[i].productid);
+                td2.appendChild(td2Text);
+                row.appendChild(td2);
+
+                var td3 = document.createElement("td");
+                var td3Text = document.createTextNode(data[i].productName);
+                td3.appendChild(td3Text);
+                row.appendChild(td3);
+
+                var td4 = document.createElement("td");
+                var td4Text = document.createTextNode(data[i].desc);
+                td4.appendChild(td4Text);
+                row.appendChild(td4);
+
+                var td5 = document.createElement("td");
+                var td5Text = document.createTextNode(data[i].price);
+                td5.appendChild(td5Text);
+                row.appendChild(td5);
+
+                var td6 = document.createElement("td");
+                var td6Text = document.createTextNode(data[i].userId);
+                td6.appendChild(td6Text);
+                row.appendChild(td6);
+
+                var td7 = document.createElement('td');
+                var orderBtn = document.createElement('button');
+
+                var sessionStorageData = sessionStorage.getItem("loggedInUserDetails");
+                var userData = JSON.parse(sessionStorageData);
+                var userId = userData.id;
+
+                orderBtn.addEventListener('click', function () {
+                    var data = this.parentElement.parentElement.cells;
+                    var xrandom = "O" + Math.floor((Math.random() * 100) + 1);
+                    var orderDate = new Date();
+                    var jsonObject = {
+                        id: xrandom, productid: data[1].innerHTML, productName: data[2].innerHTML, desc: data[3].innerHTML,
+                        price: data[4].innerHTML, orderDate: orderDate, userId: userId
+                    };
+                    var deletejsonObject = {
+                        id: data[0].innerHTML, productid: data[1].innerHTML, productName: data[2].innerHTML, desc: data[3].innerHTML,
+                        price: data[4].innerHTML, userId: userId
+                    };
+                    sessionStorage.setItem("orderDetails", JSON.stringify(jsonObject));
+                    placeOrder(jsonObject, deletejsonObject);
+                })
+
+                var orderBtnText = document.createTextNode('PlaceOrder');
+                orderBtn.appendChild(orderBtnText);
+
+                var deleteBtn = document.createElement('button');
+                deleteBtn.addEventListener('click', function () {
+                    var data = this.parentElement.parentElement.cells;
+                                      
+                    var jsonObject = {
+                        id: data[0].innerHTML, productid: data[1].innerHTML, productName: data[2].innerHTML, desc: data[3].innerHTML,
+                        price: data[4].innerHTML,userId: userId
+                    };
+                    sessionStorage.setItem("deleteDetails", JSON.stringify(jsonObject));
+                    deleteFromCart(jsonObject);
+                })
+                var deleteBtnText = document.createTextNode('DeleteItem');
+                deleteBtn.appendChild(deleteBtnText);
+
+                td7.appendChild(deleteBtn);
+                td7.appendChild(orderBtn);
+                row.appendChild(td7);
+
+                // add the row to the end of the table body
+                tblBody.appendChild(row);
+            }
+        }
+        tbl.appendChild(tblBody);
+        // appends <table> into <body>
+        body.appendChild(tbl);
+        // sets the border attribute of tbl to 1;
+        tbl.setAttribute("border", "1");
+    }
+
+        
+    function placeOrder(jsonObject, deletejsonObject) {
+        var orderdata = JSON.stringify(jsonObject);
+        var deleteData = deletejsonObject;
+        var placeOrder="placeOrder";
+            var xhttp;
+            if (window.XMLHttpRequest) {
+                xhttp = new XMLHttpRequest();
+            } else {
+                xhttp = new ActiveXObject();
+            }
+            var placeOrderMsgDisplay = document.getElementById("allcartId");
+            var productDivdisplayBlock = document.getElementById("productId");
+            var regDisplayBlock = document.getElementById("regDisplay");
+            var loginDisplayBlock = document.getElementById("loginDisplay");
+            var regSuccessdisplayBlock = document.getElementById("userDetailsTable");
+            var loginMsgdisplayBlock = document.getElementById("loginMsgId");
+            var cartDivDisplay = document.getElementById("cartId");
+           var myOrderDisplay = document.getElementById("orderId");
+            xhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 201) {
+                    placeOrderMsgDisplay.style.display = "block";
+                    productDivdisplayBlock.style.display = "none";
+                    regDisplayBlock.style.display = "none";
+                    loginDisplayBlock.style.display = "none";
+                    regSuccessdisplayBlock.style.display = "none";
+                    loginMsgdisplayBlock.style.display = "none";
+                    cartDivDisplay.style.display = "none";
+                    myOrderDisplay.style.display = "none";
+                    document.getElementById("allcarts").innerHTML = " Place order successfully :";
+                    deleteFromCart(deleteData, placeOrder);
+                    JSON.parse(this.response);
+                }
+            }
+            xhttp.open("POST", "http://localhost:3000/orders", true);
+            xhttp.setRequestHeader("Content-type", "application/json");
+            console.log(orderdata)
+            xhttp.send(orderdata);
+    }
+
+    function deleteFromCart(jsonObject, placeOrder){
+      var cartdata = jsonObject;
+      var xhttp;
+      if (window.XMLHttpRequest) {
+          xhttp = new XMLHttpRequest();
+      } else {
+          xhttp = new ActiveXObject();
+      }
+      var placeOrderMsgDisplay = document.getElementById("allcartId");
+      var productDivdisplayBlock = document.getElementById("productId");
+      var regDisplayBlock = document.getElementById("regDisplay");
+      var loginDisplayBlock = document.getElementById("loginDisplay");
+      var regSuccessdisplayBlock = document.getElementById("userDetailsTable");
+      var loginMsgdisplayBlock = document.getElementById("loginMsgId");
+      var cartDivDisplay = document.getElementById("cartId");
+        var myOrderDisplay = document.getElementById("orderId");
+      xhttp.onreadystatechange = function () {
+          if (this.readyState == 4 && this.status == 200) {
+              placeOrderMsgDisplay.style.display = "block";
+              productDivdisplayBlock.style.display = "none";
+              regDisplayBlock.style.display = "none";
+              loginDisplayBlock.style.display = "none";
+              regSuccessdisplayBlock.style.display = "none";
+              loginMsgdisplayBlock.style.display = "none";
+              myOrderDisplay.style.display = "none";
+              cartDivDisplay.style.display = "none";
+              if (placeOrder != "placeOrder") {
+                  document.getElementById("allcarts").innerHTML = " Item successfully deleted from cart  :";
+                  JSON.parse(this.response);
+              }
+          }
+      }
+    
+      xhttp.open("DELETE", "http://localhost:3000/carts/" + cartdata.id, true);
+      xhttp.setRequestHeader("Content-type", "application/json");
+      console.log(cartdata)
+     
+      xhttp.send();
+
+    }
+
+    function MyOrders() {
+       if (isLoggedIn) {
+            getAllOrders();
+        }
+
+    }
+    function getAllOrders() {
+
+        var sessionStorageData = sessionStorage.getItem("loggedInUserDetails");
+        var userData = JSON.parse(sessionStorageData);
+        var userId = userData.id;
+
+
+        var productDivdisplayBlock = document.getElementById("productId");
+        var regDisplayBlock = document.getElementById("regDisplay");
+        var loginDisplayBlock = document.getElementById("loginDisplay");
+        var regSuccessdisplayBlock = document.getElementById("userDetailsTable");
+        var loginMsgdisplayBlock = document.getElementById("loginMsgId");
+        var cartDivDisplay = document.getElementById("cartId");
+        var allCartsDisplay = document.getElementById("allcartId");
+        var myOrderDisplay = document.getElementById("orderId");
+
+        var httpReq;
+        if (window.XMLHttpRequest) {
+            httpReq = new XMLHttpRequest();
+        } else {
+            httpReq = new ActiveXObject();
+        }
+        httpReq.onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 200) {
+                if (this.response != "[]") {
+                    productDivdisplayBlock.style.display = "none";
+                    regDisplayBlock.style.display = "none";
+                    loginDisplayBlock.style.display = "none";
+                    regSuccessdisplayBlock.style.display = "none";
+                    loginMsgdisplayBlock.style.display = "none";
+                    cartDivDisplay.style.display = "none";
+                    loginDisplayBlock.style.display = "none";
+                    allCartsDisplay.style.display = "none";
+                    myOrderDisplay.style.display = "block";
+                    generate_order_table(this.response);
+                } else {
+                    cartDivDisplay.style.display = "none";
+                    productDivdisplayBlock.style.display = "none";
+                    regDisplayBlock.style.display = "none";
+                    loginDisplayBlock.style.display = "none";
+                    regSuccessdisplayBlock.style.display = "none";
+                    loginMsgdisplayBlock.style.display = "none";
+                    loginDisplayBlock.style.display = "none";
+                    allCartsDisplay.style.display = "none";
+                    myOrderDisplay.style.display = "block";
+                    document.getElementById("allorders").innerHTML = "Don't have any Order till now";
+                }
+            }
+        }
+        httpReq.open("GET", "http://localhost:3000/orders?userId=" + userId, true);
+        httpReq.send();
+    }
+
+    function generate_order_table(response) {
+
+        document.designMode = "on";
+        // get the reference for the body
+        var body = document.getElementById("orderId");
+
+        // creates a <table> element and a <tbody> element
+        var tbl = document.createElement("table");
+
+        // set table design here
+        // tb1.setAttribute("style","color:lightskyblue;")
+
+        var header = document.createElement('thead');
+        var headingRow = document.createElement('tr');
+
+        // header.style.backgroundColor = green;
+        header.setAttribute("style", "background-color:green; font-size:20px; font-family: Dubai;");
+
+        var headingCell1 = document.createElement('td');
+        var headingText1 = document.createTextNode('OrderId');
+        headingCell1.appendChild(headingText1);
+        headingRow.appendChild(headingCell1);
+
+        var headingCell2 = document.createElement('td');
+        var headingText2 = document.createTextNode('productid');
+        headingCell2.appendChild(headingText2);
+        headingRow.appendChild(headingCell2);
+
+        var headingCell3 = document.createElement('td');
+        var headingText3 = document.createTextNode('productName');
+        headingCell3.appendChild(headingText3);
+        headingRow.appendChild(headingCell3);
+
+        var headingCell4 = document.createElement('td');
+        var headingText4 = document.createTextNode('productDesc');
+        headingCell4.appendChild(headingText4);
+        headingRow.appendChild(headingCell4);
+
+        var headingCell5 = document.createElement('td');
+        var headingText5 = document.createTextNode('price');
+        headingCell5.appendChild(headingText5);
+        headingRow.appendChild(headingCell5);
+
+        var headingCell6 = document.createElement('td');
+        var headingText6 = document.createTextNode('OrderDate');
+        headingCell6.appendChild(headingText6);
+        headingRow.appendChild(headingCell6);
+
+        var headingCell7 = document.createElement('td');
+        var headingText7 = document.createTextNode('TotalPrice');
+        headingCell7.appendChild(headingText7);
+        headingRow.appendChild(headingCell7);
+
+       
+        header.appendChild(headingRow)
+        tbl.appendChild(header)
+
+
+        var tblBody = document.createElement("tbody");
+        var data = JSON.parse(response);
+        var tableRowLength = data.length;
+        var totalPrice = 0;
+        if (tableRowLength > 0) {
+            // creating all cells
+            for (var i = 0; i < tableRowLength; i++) {
+                // creates a table row
+                var row = document.createElement("tr");
+
+                var td1 = document.createElement("td");
+                var td1Text = document.createTextNode(data[i].id);
+                td1.appendChild(td1Text);
+                row.appendChild(td1);
+
+                var td2 = document.createElement("td");
+                var td2Text = document.createTextNode(data[i].productid);
+                td2.appendChild(td2Text);
+                row.appendChild(td2);
+
+                var td3 = document.createElement("td");
+                var td3Text = document.createTextNode(data[i].productName);
+                td3.appendChild(td3Text);
+                row.appendChild(td3);
+
+                var td4 = document.createElement("td");
+                var td4Text = document.createTextNode(data[i].desc);
+                td4.appendChild(td4Text);
+                row.appendChild(td4);
+
+                var td5 = document.createElement("td");
+                var td5Text = document.createTextNode(data[i].price);
+                td5.appendChild(td5Text);
+                row.appendChild(td5);
+
+                var td6 = document.createElement("td");
+                var td6Text = document.createTextNode(data[i].orderDate);
+                td6.appendChild(td6Text);
+                row.appendChild(td6);
+
+                if (i > 0) {
+                    var preTotalPrice = parseInt(totalPrice, 10);
+                    var currentItemPrice =  parseInt(data[i].price,10)
+                    totalPrice = preTotalPrice + currentItemPrice;
+                } else {
+                    totalPrice = data[i].price;
+                 }
+
+                var td7 = document.createElement('td');
+                var td7Text = document.createTextNode(""+totalPrice);
+                td7.appendChild(td7Text);
+                row.appendChild(td7);
+
+                // add the row to the end of the table body
+                tblBody.appendChild(row);
+            }
+        }
+        tbl.appendChild(tblBody);
+        // appends <table> into <body>
+        body.appendChild(tbl);
+        // sets the border attribute of tbl to 1;
+        tbl.setAttribute("border", "1");
+
+    }
+
+</script>
+

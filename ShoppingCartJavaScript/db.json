@@ -1,0 +1,154 @@
+{
+    "users": [
+      {
+        "userName": "ABC",
+        "mobileNumber": "1234567890",
+        "address": "sfsd",
+        "email": "abc@dbs.com",
+        "password": "pass",
+        "id": "103"
+      },
+      {
+        "id": 63,
+        "userName": "ABC",
+        "password": "abc",
+        "email": "abc@hcl.com",
+        "mobileNumber": "1234567890",
+        "address": "aadasd"
+      },
+      {
+        "id": 34,
+        "userName": "ABC",
+        "password": "sdsa",
+        "email": "abc@hcl.com",
+        "mobileNumber": "1234567890",
+        "address": "HYD"
+      },
+      {
+        "id": 19,
+        "userName": "ABC",
+        "password": "dsfsdf",
+        "email": "abc@hcl.com",
+        "mobileNumber": "1234567890",
+        "address": "HYD"
+      },
+      {
+        "id": 35,
+        "userName": "ABC",
+        "password": "gfdgfdg",
+        "email": "abc@hcl.com",
+        "mobileNumber": "1234567890",
+        "address": "aadasd"
+      },
+      {
+        "id": 29,
+        "userName": "Anand",
+        "password": "asd",
+        "email": "abc@hcl.com",
+        "mobileNumber": "1234567890",
+        "address": "HYD"
+      },
+      {
+        "id": 8,
+        "userName": "Anand",
+        "password": "asd",
+        "email": "abc@hcl.com",
+        "mobileNumber": "1234567890",
+        "address": "HYD"
+      },
+      {
+        "id": 9,
+        "userName": "Anand",
+        "password": "asd",
+        "email": "abc@hcl.com",
+        "mobileNumber": "1234567890",
+        "address": "HYD"
+      },
+      {
+        "id": 15,
+        "userName": "ABC",
+        "password": "fdsfds",
+        "email": "sd",
+        "mobileNumber": "1234567890",
+        "address": "HYD"
+      },
+      {
+        "id": "U84",
+        "userName": "Rahul",
+        "password": "1234",
+        "email": "abc@hcl.com",
+        "mobileNumber": "1234567890",
+        "address": "HYD"
+      }
+    ],
+    "products": [
+      {
+        "productid": "p123",
+        "productName": "Mobile",
+        "desc": "Samsung M20",
+        "price": "12000"
+      },
+      {
+        "productid": "p145",
+        "productName": "TV",
+        "desc": "MI 43cm lED Display",
+        "price": "25000"
+      }
+    ],
+    "carts": [
+      {
+        "id": "C84",
+        "productid": "p123",
+        "productName": "Mobile",
+        "desc": "Samsung M20",
+        "price": "12000",
+        "userId": "8"
+      },
+      {
+        "id": "C93",
+        "productid": "p123",
+        "productName": "Mobile",
+        "desc": "Samsung M20",
+        "price": "12000",
+        "userId": "8"
+      }
+    ],
+    "orders": [
+      {
+        "id": "O70",
+        "productid": "p123",
+        "productName": "Mobile",
+        "desc": "Samsung M20",
+        "price": "12000",
+        "orderDate": "2020-05-14T07:42:49.404Z",
+        "userId": "8"
+      },
+      {
+        "id": "O38",
+        "productid": "p145",
+        "productName": "TV",
+        "desc": "MI 43cm lED Display",
+        "price": "25000",
+        "orderDate": "2020-05-14T07:53:47.202Z",
+        "userId": "8"
+      },
+      {
+        "id": "O14",
+        "productid": "p145",
+        "productName": "TV",
+        "desc": "MI 43cm lED Display",
+        "price": "25000",
+        "orderDate": "2020-05-14T08:02:19.136Z",
+        "userId": "8"
+      },
+      {
+        "id": "O76",
+        "productid": "p145",
+        "productName": "TV",
+        "desc": "MI 43cm lED Display",
+        "price": "25000",
+        "orderDate": "2020-05-14T08:04:06.100Z",
+        "userId": "8"
+      }
+    ]
+  }
